@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: datg
+spec:
+  selector:
+    matchLabels:
+      app: datg
+  template:
+    metadata:
+      labels:
+        app: datg
+    spec:
+      containers:
+        - name: datg
+          image: pskreter/datg:latest
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP

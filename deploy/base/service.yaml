@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: datg
+  labels:
+    app: datg
+spec:
+  ports:
+    - port: 80
+  selector:
+    app: datg
+  type: LoadBalancer
